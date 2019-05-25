@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: cadetblue;
+    font-display: fallback;
+}
+h2{
+    text-align: left;
+}
+p{
+    color: darkgreen;
+    font-stretch: expanded;
+    padding-left: 25px;
+
+}
+p.indent{
+    padding-left: 75px;
+}
+input{
+    width: auto;
+    height: inherit;
+}

@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>CALORIE SERVINGS</title>
+<link rel="stylesheet" href="style.css"> 
+ <script type="text/javascript">
+  function incrementsum(ele){
+    console.log(ele.value);
+    var total=document.getElementById("tot-cal");
+    total.value=parseInt(total.value)+parseInt(ele.value);
+  }
+
+        function pqr(){
+            var x=document.getElementById("cal-req");
+        document.write(x);
+        }
+
+    function addField(n)
+{
+    var tr = n.parentNode.parentNode.cloneNode(true);    
+    console.log(n.parentNode.parentNode);
+    document.getElementById("tbl").appendChild(tr);
+}
+    
+
+</script> 
+
+</head>
+
+<body>
+<header>
+<h1>CALORIE SERVINGS</h1>
+<br><br>
+<h2>
+  <p>NAME :<input type="text" name="name"><br><br></p>
+  <p>AGE :  <input type="number" name="age"><br><br></p>
+  <p>HEIGHT :  <input type="number" name="ht"><br><br></p>
+  <p>WEIGHT :  <input type="number" name="wt"><br><br></p>
+  <p>YOUR DAILY CALORIE REQUIREMENT :  <input type="number" name="cal-req"><br><br></p>
+  
+  <table>
+  <tbody id="tbl">
+    <tr>
+      <th><p class="indent">FOOD CONSUMED</p></th>
+      <th><p class="indent">AMOUNT OF CALORIE</p></th>
+    </tr>
+    <tr class="input-fields">
+        <td><p class="indent"><input type="text" name="food-item" ></p></td>
+        <td><p class="indent"><input type="number" id="cal-amt" onchange="incrementsum(this)" ></p></td>
+        <td><input type="submit" class="button" value="Add another item" onclick="addField(this);" /></td>          
+    </tr>  
+  </tbody>
+  
+</table>
+    
+    <p class="indent">TOTAL CALORIE INPUT = <input type="number" value="0" id="tot-cal"></p>
+    
+<br><br>    
+
+<button onclick='pqr()'>NEXT</button>    
+    
+  
+    
+</h2>
+
+
+
+</header>
+</body>
+</html>
+
